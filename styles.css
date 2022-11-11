@@ -1,0 +1,248 @@
+html {
+    background-color: #020659;
+    margin: 0 auto;
+    width: 375px;
+    font-family: Optima, sans-serif;
+}
+
+body {
+    background-color: #fff;   
+}
+
+/* idk where this goes lol h1 {
+    font-weight: bold;
+    font-size: 20pt;
+    color:#FFF;
+} */
+
+#intro {
+    background-image: linear-gradient(to right, #030A8C , #020873, black); /*its a gradient!!! need to do that*/
+    color: #fff;
+    padding: 10px;
+}
+
+#intro h2 {
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+nav ul {
+    position: absolute;
+    top: 0px;
+}
+
+nav a {
+    text-decoration: none;
+    color:#FFF;
+}
+a:hover {
+    background-color: #590242;
+}
+nav li {
+    text-decoration: none; /*put in hamburger menu txt*/
+    display: flex;
+}
+#muzak-maker {
+    font-variant: small-caps;
+}
+
+
+
+
+/* HAMBURGER MENU STUFF */
+/* ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}  */
+
+h3 {
+    font-weight: bold;
+    font-size: 20pt;
+    color:#590242;
+    margin-left: 15px;
+}
+
+#trending {
+   display: flex;
+   overflow: auto;
+  white-space: nowrap;
+}
+
+#trending figure {
+    position: relative;
+    margin: 10px;
+}
+#trending figcaption {
+    position: relative;
+    top:320px;
+    width: 100%;
+    background-color: #FFF; 
+    opacity: .5;/*opacity*/
+    color:#590242;
+    padding-bottom: 5px;
+}
+
+#trending audio { /*--make transparent!!--DOUBLE CHECK MOCKUP TO MAKE SURE EXACTLY IN PLACE*/
+    position: absolute;
+    left: 5px;
+    top: 50%;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: #FFF;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-play-button {
+    background-color: #FFF;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-enclosure {
+    background-color: red;
+    opacity: .6
+}
+
+#trending p {
+    margin-left: 10px;
+    height: 15px;
+    opacity: 1; /*need to make letters opaque*/
+}
+
+#trending p:first-child {
+    color:#590242;
+    font-weight: bold;
+    font-size: 16pt;
+    padding-top: 5px;
+}
+/* SCROLL BAR STUFF! --need to go back and refine */
+#trending::-webkit-scrollbar {
+    width: 100px;
+}
+
+/* track */
+#trending::-webkit-scrollbar-track {
+    background: #9c5f8c; /*how to make track lighter?*/
+}
+
+/* handle -- backgrouund: */
+#trending::-webkit-scrollbar-thumb {
+    background: #590242;
+    width: 100px;
+    border-radius: 5px;
+}
+
+/* handle on hover */
+#trending::-webkit-scrollbar-thumb:hover {
+    background: #FFF;
+}
+
+button {
+    background-color: #590242;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: Optima;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+.your-playlists p, .curated-playlists p {
+    font-size: 14pt;
+    color: #FFF; 
+}
+
+.your-playlists p:first-child, .curated-playlists p:first-child {
+    font-size: 16pt;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.your-playlists {
+    background-color: #0D8DFB;
+    display: flex;
+    overflow: auto;
+    gap: 10px;
+}
+.your-playlists figure {
+    background-color: #2699FB;  
+    margin: 5px;
+    padding: 10px;
+}
+
+.your-playlists figcaption {
+    width: 100%;
+    text-align: center;
+}
+
+.your-playlists ::-webkit-scrollbar, .curated-playlists ::-webkit-scrollbar {
+    width: 100px;
+}
+.your-playlists ::-webkit-scrollbar-track, .curated-playlists ::-webkit-scrollbar-track  {
+    background:#030A8C;
+}
+.your-playlists ::-webkit-scrollbar-thumb, .curated-playlists ::-webkit-scrollbar-thumb {
+    background: #020659;
+    width: 100px;
+    border-radius: 5px;
+}
+.your-playlists ::-webkit-scrollbar-thumb:hover, .curated-playlists ::-webkit-scrollbar-thumb:hover {
+    background-color: #FFF;
+}
+
+/*CURATED SECTION*/
+.curated-playlists {
+    background-color: #020873;
+    display: flex;
+    overflow: auto;
+    gap: 10px;
+}
