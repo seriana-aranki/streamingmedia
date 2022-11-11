@@ -1,19 +1,20 @@
 html {
     background-color: #020659;
     margin: 0 auto;
-    width: 375px;
     font-family: Optima, sans-serif;
 }
 
 body {
-    background-color: #fff;   
+    background-color: #fff;  
+    width: 375px; 
 }
 
-/* idk where this goes lol h1 {
+ h1 {
     font-weight: bold;
     font-size: 20pt;
     color:#FFF;
-} */
+    font-variant: small-caps;
+}
 
 #intro {
     background-image: linear-gradient(to right, #030A8C , #020873, black); /*its a gradient!!! need to do that*/
@@ -21,15 +22,11 @@ body {
     padding: 10px;
 }
 
-#intro h2 {
-    font-variant: small-caps;
-    font-weight: bold;
-    font-size: 20pt;
-}
 
 nav ul {
     position: absolute;
     top: 0px;
+    background-color: #020873;
 }
 
 nav a {
@@ -42,6 +39,7 @@ a:hover {
 nav li {
     text-decoration: none; /*put in hamburger menu txt*/
     display: flex;
+    list-style: none;
 }
 #muzak-maker {
     font-variant: small-caps;
@@ -51,7 +49,7 @@ nav li {
 
 
 /* HAMBURGER MENU STUFF */
-/* ul {
+ul {
     overflow: hidden;
     max-height: 0;
     transition: max-height .2s ease-out;
@@ -103,7 +101,7 @@ input:checked ~ label span:after {
 }
 input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
     top: 0;
-}  */
+} 
 
 h3 {
     font-weight: bold;
@@ -111,6 +109,8 @@ h3 {
     color:#590242;
     margin-left: 15px;
 }
+
+/*/////////////TRENDING SECTION///////////*/
 
 #trending {
    display: flex;
@@ -163,26 +163,24 @@ audio::-webkit-media-controls-enclosure {
     font-size: 16pt;
     padding-top: 5px;
 }
-/* SCROLL BAR STUFF! --need to go back and refine */
 #trending::-webkit-scrollbar {
     width: 100px;
 }
 
-/* track */
+
 #trending::-webkit-scrollbar-track {
     background: #9c5f8c; /*how to make track lighter?*/
 }
 
-/* handle -- backgrouund: */
+
 #trending::-webkit-scrollbar-thumb {
     background: #590242;
     width: 100px;
     border-radius: 5px;
 }
 
-/* handle on hover */
 #trending::-webkit-scrollbar-thumb:hover {
-    background: #FFF;
+    background: #020659;
 }
 
 button {
@@ -192,10 +190,15 @@ button {
     font-size: 14pt;
     font-family: Optima;
     margin-top: 10px;
-    margin-left: 30px;
+    margin-left: 15px;
     border-radius: 5px;
 }
 
+button:hover {
+    background-color: #020659;
+}
+
+/*/////////////YOUR PLAYLISTS SECTION///////////*/
 .your-playlists p, .curated-playlists p {
     font-size: 14pt;
     color: #FFF; 
@@ -224,25 +227,70 @@ button {
     text-align: center;
 }
 
-.your-playlists ::-webkit-scrollbar, .curated-playlists ::-webkit-scrollbar {
+.your-playlists::-webkit-scrollbar, .curated-playlists::-webkit-scrollbar {
     width: 100px;
 }
-.your-playlists ::-webkit-scrollbar-track, .curated-playlists ::-webkit-scrollbar-track  {
+.your-playlists::-webkit-scrollbar-track, .curated-playlists::-webkit-scrollbar-track  {
     background:#030A8C;
 }
-.your-playlists ::-webkit-scrollbar-thumb, .curated-playlists ::-webkit-scrollbar-thumb {
+.your-playlists::-webkit-scrollbar-thumb, .curated-playlists::-webkit-scrollbar-thumb {
     background: #020659;
     width: 100px;
     border-radius: 5px;
 }
-.your-playlists ::-webkit-scrollbar-thumb:hover, .curated-playlists ::-webkit-scrollbar-thumb:hover {
+.your-playlists::-webkit-scrollbar-thumb:hover, .curated-playlists::-webkit-scrollbar-thumb:hover {
     background-color: #FFF;
 }
 
-/*CURATED SECTION*/
+.your-playlists figure:hover, .curated-playlists figure:hover {
+    background-color: #590242;
+}
+
+/*/////////////CURATED SECTION///////////*/
 .curated-playlists {
     background-color: #020873;
     display: flex;
     overflow: auto;
     gap: 10px;
+}
+.curated-playlists figure {
+    background-color: #030A8C;  
+    margin: 5px;
+    padding: 10px;
+}
+
+
+.curated-playlists figcaption {
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    font-size: 10pt;
+    font-weight: bold;
+    color: #590242;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+/*//////////////////MEDIA QUERIES AND WIDE LAYOUT////////////////////*/
+
+@media screen and (min-width: 834px) {
+    html {
+        margin: 0 auto;
+    }
+    body {
+        width: 834px;
+        margin: 0 auto;
+    }
+     ul {
+            display: flex;
+        }
+    nav li {
+        text-align: center;
+        width: 100%;
+        text-transform: uppercase;
+    }
+
 }
