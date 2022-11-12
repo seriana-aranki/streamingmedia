@@ -11,28 +11,28 @@
             <h1>Smooth Jazz</h1>
             <p>This station is dedicated to the soothing sounds of smooth jazz. This genre of commercially oriented crossover jazz became dominant in the 1980s and early 1990s.</p>
         </section>
-        <header>
+        <header class="header">
             <nav>
-               
-                    <a href="/" class="logo">MuzakMaker</a>
-                    <input class="menu-btn" type="checkbox" id="menu-btn">
-                    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-                    <ul class="menu">
-
-                        <!-- <li id="muzak-maker"><a href="#">MuzakMaker</a></li> -->
-                        <li><a href="#">Trending Songs</a></li>
-                        <li><a href="#">Your playlists</a></li>
-                        <li><a href="#">Curated Playlists</a></li>
-                        <li><a href="#"><img src="images/duke-silver.png" alt="Duke Silver playing the saxophone"></a></li>
-                    </ul>
-        
-               
+                <ul class="menu">
+                    <input type="checkbox">
+                    <label for="menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <li id="muzak-maker"><a href="#">MuzakMaker</a></li>
+                    <li><a href="#">Trending Songs</a></li>
+                    <li><a href="#">Your playlists</a></li>
+                    <li><a href="#">Curated Playlists</a></li>
+                    <li><a href="#"><img src="images/duke-silver.png" alt="Duke Silver playing the saxophone"></a></li>
+                </ul>
             </nav>
         </header>
 
         
-            <h3 id="trending-title">Trending Songs</h3>
-            <section id="trending">
+            <main>
+                <h3 id="trending-title">Trending Songs</h3>
+                <section id="trending">
                 <figure>
                     <figcaption>
                         <p>Aloma</p>
@@ -81,7 +81,8 @@
          <button type="button" id="trending-btn">More trending</button> <!--button at bottom of section-->
 
         <h3 id="playlist-title">Your Playlists</h3>
-        <section class="your-playlists">
+        <div id="two-col-grid">
+            <section class="your-playlists">
                 <figure> <!--may need to add another mini section for styling-->
                     <img src="images/best-of-2020-cover.png" alt="lights making the number 2020">
                     <figcaption>
@@ -122,7 +123,7 @@
                     </figcaption> 
                 </figure>
         </section>
-        <button type="button">All your playlists</button> <!--button at bottom of section-->
+        <button type="button" id="your-btn">All your playlists</button> <!--button at bottom of section-->
 
 
 
@@ -169,8 +170,9 @@
                 </figcaption>
             </figure>
         </section>
-        <button type="button">More curated</button> <!--button at bottom of section // 
-            **ask if it should be type=button-->
+        <button type="button" id="curated-btn">More curated</button> 
+        </div>  <!--end of grid div-->
+    </main>
 
 
         <footer>
