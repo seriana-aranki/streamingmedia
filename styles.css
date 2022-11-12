@@ -42,7 +42,8 @@ nav li {
     font-variant: small-caps;
     font-size: 20pt;
     position: absolute;
-    bottom: 3px;
+    left: 120px;
+    top: 10px;
 
 }
 
@@ -59,6 +60,7 @@ ul {
     overflow: hidden;
     max-height: 0;
     transition: max-height .2s ease-out;
+    text-align: center;
 }
 label {     /*///////////menu icon////////*/
     cursor: pointer;
@@ -337,5 +339,18 @@ footer {
     .curated-playlists {
         grid-row-start: 1;
     }
-   
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    label span, input {
+        display: none;
+    }
+    #muzak-maker {
+        position: absolute;
+        left: -90px;
+    }
 }
