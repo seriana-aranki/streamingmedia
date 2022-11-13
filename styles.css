@@ -137,8 +137,7 @@ h3 {
     position: relative;
     top:320px;
     width: 100%;
-    background-color: #FFF; 
-    opacity: .5;/*opacity*/
+    background-color: rgb(255,255,255, .6);
     color:#590242;
     padding-bottom: 5px;
 }
@@ -158,8 +157,7 @@ audio::-webkit-media-controls-play-button {
     border-radius: 50%;
 }
 audio::-webkit-media-controls-enclosure {
-    background-color: red;
-    opacity: .6
+    background-color: rgb(255,255,255, .6);
 }
 
 #trending p {
@@ -306,11 +304,16 @@ footer {
     .your-playlists, .curated-playlists {
         flex-direction: column;
     }
-    .your-playlists figure {
-        overflow: auto;
+    .your-playlists figure, .curated-playlists figure {
+        height: 150px;
     }
     .your-playlists img, .curated-playlists img {
         float: left;
+    }
+    .your-playlists {
+        overflow-y: scroll;
+        height: 600px;
+        display: initial;
     }
     #trending-btn {
         position: relative;
@@ -328,6 +331,8 @@ footer {
     #your-btn {
         width: max-content;
         height: max-content;
+        position: relative;
+        left: 200px;
     }
     .curated-playlists, #curated-btn {
         grid-column-start: 2;
@@ -335,9 +340,19 @@ footer {
     }
     #curated-btn {
         width: 150px;
+        position: relative;
+        bottom: 95px;
+        left: 200px;
     }
     .curated-playlists {
         grid-row-start: 1;
+        overflow: scroll;
+        height: 600px;
+        overflow-x: hidden;
+        display: initial;
+    }
+    .your-playlists::-webkit-scrollbar, .curated-playlists::-webkit-scrollbar {
+        width: 10px;
     }
     ul {
         overflow: visible;
@@ -349,8 +364,23 @@ footer {
     label span, input {
         display: none;
     }
+
+    .header {
+        background-color: #020873;
+        width: 834px;
+        height: 90px;
+    }
     #muzak-maker {
-        position: absolute;
-        left: -90px;
+        position: revert;
+    }
+    #curated-title {
+        position: relative;
+        bottom: 698px;
+    }
+    #playlist-title, #curated-title {
+        margin-top: 40px;
+    }
+    footer {
+        margin-top: 0;
     }
 }
